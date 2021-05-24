@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
 
 :root {
-    --dred: hsl(0, 36%, 70%);
+    --dred: hsl(0, 36%, 80%);
     --sred: hsl(0, 93%, 68%);
-    --gred: hsl(0, 6%, 24%);
+    --gred: hsl(0, 6%, 30%);
     --gr1: hsl(0, 0%, 100%);
     --gr2: hsl(0,100%, 98%);
     --gr3:  hsl(0, 80%, 86%); 
@@ -18,32 +18,93 @@
     padding: 0;
 }
 
-div {
-    border: 1px dashed orange;
+div, form {
+    /* border: 1px dashed orange; */
 }
 
 body {
     min-height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--gred);
+
     display: grid;
-    
+
     grid-template-columns: 60% 40%;
-    grid-template-rows: 20% auto;
+    grid-template-rows: 15% auto;
     grid-template-areas:    "logo image"
                             "text image";
 
-    font-family: 'Josefin Sans', sans-serif;
+
 }
 
 .logo {
     grid-area: logo;
+    padding: 4rem 4rem 4rem 6rem;
 }
 
 .text {
     grid-area: text;
+    padding: 4rem;
 }
 
 .image {
     grid-area: image;
+
+    background: no-repeat url('./images/hero-desktop.jpg') 50% 50%;
+    background-size: cover ;
+}
+h1, p, form {
+    max-width: 600px;
+    margin: 2rem;
+}
+h1, h2 {
+    
+}
+h1 {
+    font-weight: 300;
+    color: var(--dred);
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    line-height: 5.5rem;
+}
+h1 b {
+    font-weight: 400;
+    color: var(--gred);
+}
+p {
+    color: var(--dred);
+    line-height: 1.5rem;
+}
+
+#logo {
+    width: 170px;
+    height: auto
+    margin: 2rem;
+}
+
+form {
+    padding-right: 2rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 1rem 2rem 1rem 2rem;
+    line-height: 2rem;
+    border-radius: 2rem;
+    border: 1px solid var(--dred);
+    outline: none;
+
+}
+input::placeholder {
+    color: var(--dred);
+}
+input:focus {
+    outline: 1px dashed hsl(0, 36%, 70%);
+    border: 2px solid var(--sred);
+    color: var(--gred);
 }
 /* - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
 - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
