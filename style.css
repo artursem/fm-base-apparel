@@ -23,38 +23,29 @@ div, form {
 }
 
 body {
-    min-height: 100vh;
     font-family: 'Josefin Sans', sans-serif;
     color: var(--gred);
 
     display: grid;
-
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 15% auto;
-    grid-template-areas:    "logo image"
-                            "text image";
-
-
 }
 
 .logo {
     grid-area: logo;
-    padding: 4rem 4rem 4rem 6rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .text {
     grid-area: text;
-    padding: 4rem;
-    background: no-repeat url('./images/bg-pattern-desktop.svg');
-    background-size: cover;
 }
 
 .image {
     grid-area: image;
-
-    background: no-repeat url('./images/hero-desktop.jpg') 50% 50%;
-    background-size: cover;
 }
+
 h1, p, form {
     max-width: 600px;
     margin: 2rem;
@@ -111,7 +102,7 @@ input:focus {
 }
 
 button {
-    width: 150px; /* ####################### */
+     /* ####################### */
 
     height: 53px;
     border: none;
@@ -122,7 +113,6 @@ button {
     align-items: center;
 
     position: relative;
-    left: -100px;
 
     cursor: pointer;
 }
@@ -131,3 +121,56 @@ button:hover {
     background: hsl(0, 80%, 86%);
 }
 
+@media screen and (max-width: 1000px) {
+    body {
+        grid-template-rows: 15% 65vw auto;
+        grid-template-areas:    "logo"
+                                "image"
+                                "text";
+    }
+    button {
+        width: 100px;
+        left: -50px;
+    }
+    .text {
+        text-align: center;
+    }
+    .image {
+        background: no-repeat url('./images/hero-mobile.jpg');
+        background-size: cover;
+    }
+    form {
+        position: relative;
+        left: 25px;
+    }
+}
+@media screen and (min-width: 1001px) {
+    body {
+        min-height: 100vh;
+
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 15% auto;
+        grid-template-areas:    "logo image"
+                                "text image";
+    }
+
+    button {
+        width: 150px;
+        left: -100px;
+    }
+
+    .logo {
+        padding-left: 4rem;
+    }
+    
+    .text {
+        padding: 4rem;
+        background: no-repeat url('./images/bg-pattern-desktop.svg');
+        background-size: cover;
+    }
+    
+    .image {
+        background: no-repeat url('./images/hero-desktop.jpg') 50% 50%;
+        background-size: cover;
+    }
+}
