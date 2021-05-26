@@ -45,13 +45,15 @@ body {
 .text {
     grid-area: text;
     padding: 4rem;
+    background: no-repeat url('./images/bg-pattern-desktop.svg');
+    background-size: cover;
 }
 
 .image {
     grid-area: image;
 
     background: no-repeat url('./images/hero-desktop.jpg') 50% 50%;
-    background-size: cover ;
+    background-size: cover;
 }
 h1, p, form {
     max-width: 600px;
@@ -79,12 +81,14 @@ p {
 
 #logo {
     width: 170px;
-    height: auto
+    height: auto;
     margin: 2rem;
 }
 
 form {
-    padding-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 input[type="text"] {
@@ -92,7 +96,7 @@ input[type="text"] {
     font-size: 16px;
     font-weight: 600;
     padding: 1rem 2rem 1rem 2rem;
-    line-height: 2rem;
+    line-height: 1rem;
     border-radius: 2rem;
     border: 1px solid var(--dred);
     outline: none;
@@ -102,11 +106,28 @@ input::placeholder {
     color: var(--dred);
 }
 input:focus {
-    outline: 1px dashed hsl(0, 36%, 70%);
-    border: 2px solid var(--sred);
+    outline: 1px dashed hsl(0, 36%, 90%);
     color: var(--gred);
 }
-/* - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
-- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
-/*  
-     */
+
+button {
+    width: 150px; /* ####################### */
+
+    height: 53px;
+    border: none;
+    border-radius: 34px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    left: -100px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: hsl(0, 80%, 86%);
+}
+
