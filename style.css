@@ -19,7 +19,7 @@
 }
 
 div, form {
-    border: 1px dashed orange;
+    /* border: 1px dashed orange; */
 }
 
 body {
@@ -91,6 +91,10 @@ input[type="text"] {
     border-radius: 2rem;
     border: 1px solid var(--dred);
     outline: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
 }
 input::placeholder {
