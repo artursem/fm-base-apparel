@@ -19,7 +19,7 @@
 }
 
 div, form {
-    /* border: 1px dashed orange; */
+    border: 1px dashed orange;
 }
 
 body {
@@ -134,6 +134,10 @@ button:hover {
     }
     .text {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
     .image {
         background: no-repeat url('./images/hero-mobile.jpg');
