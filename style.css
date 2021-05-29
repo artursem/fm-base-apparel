@@ -76,10 +76,18 @@ p {
     margin: 2rem;
 }
 
+#error-msg {
+    color: var(--sred);
+    margin-top: 0px;
+    display: none;
+}
+
 form {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 2px;
+
 }
 
 input[type="text"] {
@@ -96,7 +104,13 @@ input[type="text"] {
     flex-direction: row;
     justify-content: space-between;
 
+    
 }
+
+.input-error {
+    background: url('./images/icon-error.svg') 75% 50% no-repeat;
+}
+
 input::placeholder {
     color: var(--dred);
 }
