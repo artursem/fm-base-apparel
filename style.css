@@ -79,6 +79,7 @@ p {
 #error-msg {
     color: var(--sred);
     margin-top: 0px;
+    padding: 0 2rem 0 2rem;
     display: none;
 }
 
