@@ -107,9 +107,6 @@ input[type="text"] {
     
 }
 
-.input-error {
-    background: url('./images/icon-error.svg') 75% 50% no-repeat;
-}
 
 input::placeholder {
     color: var(--dred);
@@ -133,10 +130,13 @@ button {
     position: relative;
 
     cursor: pointer;
+
+    box-shadow: 0.3rem .3rem 1rem .1rem rgba(0,0,0,0.3);
 }
 
 button:hover {
     background: hsl(0, 80%, 86%);
+    box-shadow: 0.3rem .3rem 1.5rem .2rem rgba(0,0,0,0.3);
 }
 
 @media screen and (max-width: 1000px) {
@@ -164,6 +164,9 @@ button:hover {
     form {
         position: relative;
         left: 25px;
+    }
+    .input-error {
+        background: url('./images/icon-error.svg') right 60px center no-repeat;
     }
 }
 @media screen and (min-width: 1001px) {
@@ -194,5 +197,8 @@ button:hover {
     .image {
         background: no-repeat url('./images/hero-desktop.jpg') 50% 50%;
         background-size: cover;
+    }
+    .input-error {
+        background: url('./images/icon-error.svg') right 120px center no-repeat;
     }
 }
